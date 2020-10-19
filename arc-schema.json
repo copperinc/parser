@@ -443,6 +443,32 @@
       "items": {
         "$ref": "#/definitions/table"
       }
+    },
+    "rules": {
+      "$id": "#/properties/rules",
+      "type": [
+        "array",
+        "object"
+      ],
+      "title": "@rules",
+      "description": "IoT rules configuration",
+      "uniqueItems": true,
+      "items": {
+        "type": [
+          "array",
+          "object"
+        ],
+        "items": [
+          {
+            "type": "string",
+            "pattern": "^[a-z][a-z|\\-|0-9]+$"
+          },
+          {
+            "type": "string",
+            "pattern": "^SELECT"
+          }
+        ]
+      }
     }
   }
 }
